@@ -19,6 +19,6 @@ Uses the latest version of `maven` in order to build the project, and then use `
 This Dockerfile has no dependency (you do not need Mavent to be installed locally).
 
 ```
-#> docker build . -f docker/Dockerfile.build
+#> docker build -f docker/Dockerfile.build -t harbor.eencloud.com/vms/openmessagingpulsar:0.1.0-test .
 ```
 

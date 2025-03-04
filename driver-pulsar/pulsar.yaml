@@ -17,8 +17,8 @@ driverClass: io.openmessaging.benchmark.driver.pulsar.PulsarBenchmarkDriver
 
 # Pulsar client-specific configuration
 client:
-  serviceUrl: pulsar://localhost:6650
-  httpUrl: http://localhost:8080
+  serviceUrl: pulsar+ssl://pulsar-proxy.pulsar.svc.cluster.local:6651
+  httpUrl: https://pulsar-proxy.pulsar.svc.cluster.local
   ioThreads: 16
   connectionsPerBroker: 8
   clusterName: local
@@ -29,7 +29,7 @@ client:
     writeQuorum: 3
     ackQuorum: 2
     deduplicationEnabled: false
-  tlsAllowInsecureConnection: false
+  tlsAllowInsecureConnection: true
   tlsEnableHostnameVerification: false
   tlsTrustCertsFilePath:
   authentication:

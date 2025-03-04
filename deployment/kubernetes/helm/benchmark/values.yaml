@@ -12,15 +12,15 @@
 # limitations under the License.
 #
 
-numWorkers: 8
-image: openmessaging/openmessaging-benchmark:latest
+numWorkers: 10
+image: harbor.eencloud.com/vms/openmessagingpulsar:0.1.0-test
 imagePullPolicy: Always
 workload: workloads/1-topic-16-partitions-1kb.yaml
 driver: driver-pulsar/pulsar.yaml
 
 # Resource Configurations
-driverMemoryRequest: 512Mi
-driverMemoryLimit: 2048Mi
+# driverMemoryRequest: 512Mi
+# driverMemoryLimit: 2048Mi
 
 #workersMemoryRequest: 512Mi
 #workersMemoryLimit: 2048Mi
